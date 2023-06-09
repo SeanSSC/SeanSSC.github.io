@@ -1,10 +1,7 @@
 
 var lastScrollPos = window.pageYOffset
 const navBar = document.getElementById("navBar")
-const infoCanvas = document.getElementById("canvasInfo2")
-const summaryCanvas = document.getElementById("canvasInfo")
-const backgrounds = document.getElementsByClassName("bg-image")
-
+const contact = document.getElementsByClassName("contactMe")[0]
 
 function scrollAction(){
     var currentScrollPos = window.pageYOffset
@@ -19,5 +16,17 @@ function scrollAction(){
     lastScrollPos = currentScrollPos
 
 }
-window.addEventListener('scroll', scrollAction);
 
+function alwaysVisible() {
+    var windowHeight = window.innerHeight;
+    var windowRight = window.innerWidth;
+    var computedStyle = window.getComputedStyle(contact);
+    var contactHeight = parseInt(computedStyle.height);
+    var windowBottomY = windowHeight - (contactHeight);
+    contact.style.top = windowBottomY + "px";
+  }
+  
+
+window.addEventListener('scroll', scrollAction);
+window.addEventListener('scroll', alwaysVisible);
+alwaysVisible;

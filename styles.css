@@ -14,6 +14,20 @@ body, html {
   position: fixed;
   width: 100%;
   padding-top: 0px;
+  z-index: 9999;
+}
+
+.contactMe{
+  z-index: 9999;
+  width: 200px;
+  height:200px;
+  position: fixed;
+  top: 650px;
+  left: 1430px;
+}
+
+#contact {
+  background-color: #9cd095 !important;
 }
 
 .nav nav-pills {
@@ -56,6 +70,13 @@ nav ul li{
   grid-template-rows: 200px 200px 200px 200px;
   column-gap: 10px;
   row-gap: 10px;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 100%;
+  column-gap: 10px;
 }
 
 .aboutMe {
