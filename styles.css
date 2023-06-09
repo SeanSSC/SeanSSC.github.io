@@ -2,6 +2,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -43,25 +44,61 @@ nav ul li{
 @font-face { font-family: k2d; 
   src: url('font/K2D-Thin.ttf'); } 
 
-#container1{
+
+.container {
   position: absolute;
-  top: 25%;
+  top: 10%;
+  left: 8%;
   margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
-#container2{
-  position: absolute;
-  top: 120%;
-  /* margin: 0 10%; */
-  height: 100%; 
-  width: 30%;
-  overflow-y: scroll;
+.aboutMe {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
-#container2::-webkit-scrollbar {
-  width: 0;
-  background: transparent; /* make scrollbar invisible */
+.resume {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
+
+.programmingLanguages {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  height: 124px;
+  overflow: auto;
+}
+
+.cardLanguages {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+}
+
+.skill {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 3;
+
+}
+
+
+
 
 .bg-image1{
   background-color: rgb(138, 170, 229);
@@ -71,6 +108,7 @@ nav ul li{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .bg-image2{
@@ -84,13 +122,6 @@ nav ul li{
   background-size: cover;
 }
 
-.canvas{
-  border:1px solid #000000;
-  background-color:black;
-  opacity: 50%;
-  position: absolute;
-  z-index: 1;
-}
 
 h1 {
   font-family: k2d;
@@ -103,6 +134,8 @@ h1 {
   margin-right: 100px;
   margin-left: 100px;
 }
+
+
 
 
 
