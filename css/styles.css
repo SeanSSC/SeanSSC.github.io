@@ -1,4 +1,16 @@
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 @font-face { font-family: k2d; 
   src: url('asset/font/K2D-Thin.ttf'); } 
 
@@ -8,7 +20,31 @@
 
 .container {
   width: 100%;
+  margin: 0px 0px;
+}
+
+.container::before{
+  content: "";
+  position: absolute;
+  left: 15%; /* Position it in the middle horizontally */
+  top: 20%; /* Position it at the top */
+  width: 1px; /* Adjust the width as needed */
+  height: 2000px;; /* Make it extend the full height of the container */
+  background-color: white;
+
+}
+
+
+#container-education{
+  background-color: #191425;
+  height: 500px;
+}
+
+#start {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100%;
-  color: black;
-  background-color: black;
+
+  background-image: url("../asset/img/bg.87635d9.webp");
 }

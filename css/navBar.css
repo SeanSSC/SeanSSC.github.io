@@ -1,0 +1,43 @@
+@font-face { font-family: k2d; 
+    src: url('../asset/font/K2D-Thin.ttf'); } 
+  
+  * {
+    font-family: k2d, Arial;
+  }
+
+.navBar {
+    z-index: 1000; /* Adjust the z-index as needed to make sure it's above other content */
+    font-family: k2d;
+    font-weight: bold;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    padding: 0px 0px;
+    width: 100%;
+}
+
+#navBarTitle {
+    font-size: 50px;
+    top:0px;
+    padding-left: 10px;
+    margin:0;
+    position: relative;
+}
+
+#navBarOptions{
+    list-style-type: none;
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+    right: 0px;
+    top: 20px;
+    font-size: 20px;
+
+}
+
+#navBarLists {
+    padding: 0px 20px;
+}
