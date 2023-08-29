@@ -1,0 +1,54 @@
+@font-face { font-family: k2d; 
+    src: url('asset/font/K2D-Thin.ttf'); } 
+  
+  * {
+    font-family: k2d, Arial;
+  }
+
+.contact {
+    font-family: k2d;
+    position: fixed;
+    color: white;
+    top: 45%;
+    left: 8%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+}
+
+#contact-title {
+    font-size: 25px;
+    margin-top: 20px; 
+}
+
+#contact-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px;
+    max-width: 100%; 
+    flex-wrap: wrap;
+}
+
+#contact-list li {
+    margin-right: 10px;
+}
+
+#linkedin, #email {
+    background-color: white;
+    border-radius: 10px;
+    width: 30px;
+    height: auto;
+}
+
+#linkedin {
+    width: 30px;
+    height: auto;
+}
+
+#email {
+    height: 30px;
+    width: 40px;
+}
+
+

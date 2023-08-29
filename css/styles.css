@@ -45,6 +45,19 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-
   background-image: url("../asset/img/bg.87635d9.webp");
+}
+
+#about-me-image {
+  height: auto;
+  width:1000px;
+  position: absolute;
+  top: 23%;
+  left: 13%;
+
+}
+
+h1 {
+  font-family: k2d;
+  color: white;
 }
