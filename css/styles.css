@@ -48,13 +48,13 @@ a {
   background-image: url("../asset/img/bg.87635d9.webp");
 }
 
+
 #about-me-image {
   height: auto;
-  width:1000px;
+  width:60%;
   position: absolute;
   top: 23%;
   left: 13%;
-
 }
 
 h1 {
