@@ -35,9 +35,22 @@
     right: 0px;
     top: 20px;
     font-size: 20px;
-
 }
 
 #navBarLists {
     padding: 0px 20px;
+}
+
+@media screen and (max-width:768px) {
+    #navBarTitle {
+        font-size: 100%;
+    }
+
+    #navBarOptions{
+        font-size: 80%;
+    }
+
+    #navBarLists {
+        padding: 0px 5px;
+    }
 }

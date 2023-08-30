@@ -34,14 +34,14 @@
     margin-right: 10px;
 }
 
-#linkedin, #email {
+#linkedin, #email, #github {
     background-color: white;
     border-radius: 10px;
     width: 30px;
     height: auto;
 }
 
-#linkedin {
+#linkedin, #github {
     width: 30px;
     height: auto;
 }
@@ -52,3 +52,35 @@
 }
 
 
+@media screen and (max-width:768px) {
+    .contact {
+        top:40%;
+        left:6.5%;
+    }
+
+    #contact-title {
+        font-size: 15px;
+    }
+
+    #contact-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #email {
+        height: auto;
+        width: 30px;
+    }
+
+    #linked-in {
+        width: 10px;
+        height: auto;
+    }
+
+    #github {
+        width: 27px;
+        height: auto;
+    }
+}

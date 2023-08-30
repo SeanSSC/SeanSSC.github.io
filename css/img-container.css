@@ -63,25 +63,15 @@ font-family: k2d, Arial;
     width:80%;
 }
 
-#select-school {
-    position:relative;
-    top: 5%;
-    left: 16%;
-}
 
-#select-jubilee {
-    filter: brightness(50%);
-}
+@media screen and (max-width:768px) {
+    .img-container {
+        width:80%;
+        height:20%;
+    }
 
-#select-school button {
-    font-family: k2d;
-    border: none;
-    font-size: 30px;
-    color:white;
-    margin: 0 10px;
-    background-color: transparent;
-}
-
-#select-school button:hover {
-    cursor: pointer;
+    #jubilee {
+        position: absolute;
+        top: 117%;
+    }
 }

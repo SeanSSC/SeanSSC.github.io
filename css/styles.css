@@ -35,33 +35,6 @@ a {
 
 }
 
-
-#container-education{
-  background-color: #191425;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding:0;
-}
-
-#start {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-image: url("../asset/img/bg.87635d9.webp");
-}
-
-
-#about-me-image {
-  height: auto;
-  width:60%;
-  position: relative;
-  top: 23%;
-  left: 13%;
-}
-
 h1 {
   font-family: k2d;
   color: white;
