@@ -1,0 +1,16 @@
+#container-experience {
+    height: 100%;
+    background-color: #151120;
+    width: 100%;
+}
+
+#container-card {
+    position: relative;
+    top: 5%;
+    left: 16%; 
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+ 
+}
