@@ -1,4 +1,4 @@
-#container-experience {
+#container-projects {
     height: 100%;
     background-color: #151120;
     width: 100%;
@@ -9,8 +9,4 @@
     top: 5%;
     left: 16%; 
     width: 100%;
-}
-
-@media screen and (max-width:768px) {
- 
 }

@@ -30,8 +30,9 @@ a {
   position: absolute;
   left: 15%;
   top: 20%; 
+  bottom: 20%; 
   width: 1px; 
-  height: 400%;
+  height: 250%;
   background-color: white;
 }
 
