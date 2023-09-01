@@ -106,7 +106,7 @@ var txt = [
   + "specialist but was moved to the Product Development Team, where my duty was more "
   + "of a front end. I improved and enhanced some of their available elements in their "
   + "product, Joget DX. In essence, Joget DX is a web-based visual approach empowers "
-  + "non-coders to build and maintain apps anytime, anywhere. As a software developer inters "
+  + "non-coders to build and maintain apps anytime, anywhere. As a software developer intern at Joget "
   + "these were the tasks handed to me: ",
   "Improved the design of the select box",
   "Added full screen functionality for their signature pad",
