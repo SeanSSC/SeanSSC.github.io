@@ -1,9 +1,9 @@
 @font-face { font-family: k2d; 
     src: url('../asset/font/K2D-Thin.ttf'); } 
   
-  * {
+* {
     font-family: k2d, Arial;
-  }
+}
 
 .navBar {
     z-index: 1000; /* Adjust the z-index as needed to make sure it's above other content */

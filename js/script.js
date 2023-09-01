@@ -9,7 +9,6 @@ const selectMonash = document.getElementById("select-monash");
 const jubil = document.getElementById("jubilee");
 const monash = document.getElementById("monash");
 jubil.style.visibility = "hidden";
-const exp = document.getElementById("experience");
 var intervalConsoleID;
 
 function scrollAction(){
@@ -24,12 +23,6 @@ function scrollAction(){
         navBar.style.visibility = "visible";
     }
     lastScrollPos = currentScrollPos;
-    
-    const expRect = exp.getBoundingClientRect();
-    console.log(currentScrollPos, expRect.top)
-    if (expRect.top == 0) {
-        intervalConsoleID = window.setInterval(updateScreen, 600);
-    }
 
     const monashEdu = edu.getBoundingClientRect();
     if (currentScrollPos + window.innerHeight >= monashEdu.top && gpaLoaded === false) {
@@ -129,12 +122,15 @@ function updateScreen() {
     if(currentIndex == 1){
         p.textContent = "> " + txt[currentIndex];
         p.style.paddingLeft = "5%";
+        p.style.margin = "0px 0px";
         p.style.textAlign = "justify";
     }else if(currentIndex > 1){
         p.textContent = "-> " + txt[currentIndex];
         p.style.paddingLeft = "10%";
+        p.style.margin = "0px 0px";
     } else{
         p.textContent = "> " + txt[currentIndex];
+        p.style.margin = "0px 0px";
     }
     docfrag.appendChild(p);
     consoleExp.appendChild(p);
@@ -145,4 +141,26 @@ function updateScreen() {
 }
 
 // Start displaying text line by line
-// var intervalConsoleID = window.setInterval(updateScreen, 600);
+var intervalConsoleID = window.setInterval(updateScreen, 600);
+
+// Define the target element (the container you want to track)
+const targetElement = document.getElementById('experience');
+
+// Create an IntersectionObserver
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    // If the element is in the viewport (user has viewed it)
+    if (entry.isIntersecting) {
+      // Start running the updateScreen function at intervals
+      intervalConsoleID = window.setInterval(updateScreen, 1000);
+    }
+    else {
+        // If the element is not in the viewport, clear the interval
+        clearInterval(intervalConsoleID);
+      }
+  });
+});
+
+// Start observing the target element
+observer.observe(targetElement);
+
