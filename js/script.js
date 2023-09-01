@@ -9,11 +9,12 @@ const selectMonash = document.getElementById("select-monash");
 const jubil = document.getElementById("jubilee");
 const monash = document.getElementById("monash");
 jubil.style.visibility = "hidden";
-
+const exp = document.getElementById("experience");
+var intervalConsoleID;
 
 function scrollAction(){
     var currentScrollPos = window.scrollY
-
+    
     //Scroll down
     if (currentScrollPos > lastScrollPos){
         navBar.style.visibility = "hidden";
@@ -23,6 +24,12 @@ function scrollAction(){
         navBar.style.visibility = "visible";
     }
     lastScrollPos = currentScrollPos;
+    
+    const expRect = exp.getBoundingClientRect();
+    console.log(currentScrollPos, expRect.top)
+    if (expRect.top == 0) {
+        intervalConsoleID = window.setInterval(updateScreen, 600);
+    }
 
     const monashEdu = edu.getBoundingClientRect();
     if (currentScrollPos + window.innerHeight >= monashEdu.top && gpaLoaded === false) {
@@ -67,7 +74,7 @@ function increaseProgress(obj, val, choice){
 }
 
 selectJubil.addEventListener("click", function(){
-    console.log("Jubil", jubil.style.visibility === "hidden")
+    consoleExp.log("Jubil", jubil.style.visibility === "hidden")
     if (jubil.style.visibility === "hidden") {
         jubil.style.visibility = "visible";
         selectJubil.style.filter = "brightness(100%)";
@@ -94,3 +101,48 @@ selectMonash.addEventListener("click", function(){
 })
 
 window.addEventListener('scroll', scrollAction);
+
+
+// Console related JS here
+var consoleExp = document.getElementById("console");
+const msg = document.getElementById("experience");
+
+var txt = [
+  "Joget Inc",
+  "Worked as a Software Developer Intern. Initially was placed as a product " 
+  + "specialist but was moved to the Product Development Team, where my duty was more " 
+  + "of a front end. I improved and enhanced some of their available elements in their "
+  + "product, Joget DX. In essence, Joget DX is a web-based visual approach empowers "
+  + "non-coders to build and maintain apps anytime, anywhere. As a software developer inters "
+  + "these were the tasks handed to me: ",
+  "Improved the design of the select box",
+  "Added full screen functionality for their signature pad",
+  "Added numpad to their text field if number formatting is turned on"
+]   
+
+var docfrag = document.createDocumentFragment();
+var currentIndex = 0;
+
+function updateScreen() {
+  if (currentIndex < txt.length) {
+    var p = document.createElement("p");
+    if(currentIndex == 1){
+        p.textContent = "> " + txt[currentIndex];
+        p.style.paddingLeft = "5%";
+        p.style.textAlign = "justify";
+    }else if(currentIndex > 1){
+        p.textContent = "-> " + txt[currentIndex];
+        p.style.paddingLeft = "10%";
+    } else{
+        p.textContent = "> " + txt[currentIndex];
+    }
+    docfrag.appendChild(p);
+    consoleExp.appendChild(p);
+    currentIndex++;
+  } else {
+    clearInterval(intervalConsoleID);
+  }
+}
+
+// Start displaying text line by line
+// var intervalConsoleID = window.setInterval(updateScreen, 600);
