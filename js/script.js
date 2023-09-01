@@ -103,7 +103,7 @@ const msg = document.getElementById("experience");
 var txt = [
   "Joget Inc",
   "Worked as a Software Developer Intern. Initially was placed as a product " 
-  + "specialist but was moved to the Product Development Team, where my duty was more " 
+  + "specialist but was moved to the Product Development Team, where my duty was more "
   + "of a front end. I improved and enhanced some of their available elements in their "
   + "product, Joget DX. In essence, Joget DX is a web-based visual approach empowers "
   + "non-coders to build and maintain apps anytime, anywhere. As a software developer inters "
@@ -143,10 +143,8 @@ function updateScreen() {
 // Start displaying text line by line
 var intervalConsoleID = window.setInterval(updateScreen, 600);
 
-// Define the target element (the container you want to track)
 const targetElement = document.getElementById('experience');
 
-// Create an IntersectionObserver
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     // If the element is in the viewport (user has viewed it)
