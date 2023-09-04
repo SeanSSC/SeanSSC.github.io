@@ -67,7 +67,6 @@ function increaseProgress(obj, val, choice){
 }
 
 selectJubil.addEventListener("click", function(){
-    consoleExp.log("Jubil", jubil.style.visibility === "hidden")
     if (jubil.style.visibility === "hidden") {
         jubil.style.visibility = "visible";
         selectJubil.style.filter = "brightness(100%)";
