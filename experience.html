@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link rel = "stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/media/img/sean.jpg" width="40" height="40" style="border-radius:50%;border:2px solid red">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">About Me</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="education.html">Education</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="project.html">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="experience.html">Experience</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+      <div class="container position-relative mt-5">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action" aria-current="true" data-bs-toggle="collapse" data-bs-target="#experienceDetails" aria-expanded="false">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Product Specialist Intern @ Joget</h5>
+              <small>3 Months</small>
+            </div>
+          </a>
+          <div class="collapse" id="experienceDetails">
+            <!-- Expanded content goes here -->
+            <div class="p-3">
+                <p class="mb-1">
+                    Worked as a Software Developer Intern. Initially was placed as a product 
+                    specialist but was moved to the Product Development Team, where my duty 
+                    was more of a front end. I improved and enhanced some of their available 
+                    elements in their product, Joget DX. In essence, Joget DX is a web-based 
+                    visual approach empowers non-coders to build and maintain apps anytime, 
+                    anywhere. As a software developer intern at Joget these were the tasks 
+                    handed to me:
+                  </p>
+                  <small>
+                    <p>1. Improved the design of the select box</p>
+                    <p>2. Added full screen functionality to their signature pad</p>
+                    <p>3. Added numpad to their text field</p>
+                    <p>4. Implement three custom theme designs</p>
+                    <p>5. Research and Development on a new Code Editor</p>
+                  </small>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <div class="position-fixed bottom-0 end-0 p-3">
+        <div class="card text-center text-bg-light" style="width: 10rem;">
+            <h5 class="card-header">Contact Me!</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col"><a href="media/Sean Sebastian Christanto.pdf" target="_blank" class="fa-solid fa-file"></a></div>
+              <div class="col"><a href="https://www.linkedin.com/in/sean-sebastian-c-a96143225/" class="fa fa-linkedin"></a></div>
+              <div class="col"><a href="mailto:seansebastianchristanto@gmail.com" target="_blank" class="fa fa-google"></a></div>
+              <div class="col"><a href="https://github.com/SeanSSC" class="fa fa-github"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
